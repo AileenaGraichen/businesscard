@@ -1,20 +1,33 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image, Button } from 'react-native';
+
 
 export default function App() {
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Image style={styles.img} source={'./assets/Tofu.JPG'} />
+      <Button title="Click Me" onPress={() => alert('Button Clicked!')} />
       <StatusBar style="auto" />
     </View>
   );
 }
 
+ 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#24897d',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+ 
+  img: {
+    width: 300,
+    height: 300,
+    borderRadius: 50 / 2,
+    borderWidth: 4,
+    borderColor: 'white',
+    resizeMode: 'contain',
   },
 });
